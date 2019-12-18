@@ -8,9 +8,10 @@
 }
 
 /* @media (prefers-reduced-motion: no-preference) { */
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+}
+
 /* } */
 
 .App-header {
@@ -31,7 +32,33 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+  border: 1px solid red;
+  padding: 5px;
+  margin-right: 10px;
+  background: skyblue;
+}
+
+a {
+  text-decoration-line: none;
+  color: #000;
+}
+
+.clearfix {
+  display: table;
+  clear: both;
+  content: ""
 }
