@@ -8,6 +8,8 @@ import Cloak from './components/Clock/Clock'
 import CalcWeight from './components/CalcWeight/CalcWeight.jsx'
 import Combination from './components/Combination/Combination'
 import FilterProduct from './components/FilterProduct/FilterProduct'
+import RouteConfigExample from './components/RouteConfigExample/RouteConfigExample'
+import QueryParams from './components/QueryParams/QueryParams'
 const PRODUCTS = [
   { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
   { category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
@@ -80,7 +82,7 @@ function AuthButton() {
 }
 
 function PrivateRoute({ children, ...rest }) {
-  console.log(children,rest)
+  console.log(children, rest)
   return (
     <Route
       {...rest}
@@ -125,10 +127,12 @@ function LoginPage() {
     </div>
   );
 }
+
 class Inbox extends React.Component {
   render() {
     return (<div>
       <h1>Inbox</h1>
+      <RouteConfigExample />
     </div>)
   }
 }
@@ -249,6 +253,9 @@ class App extends React.Component {
               <li>
                 <Link to="/topics">Topics</Link>
               </li>
+              <li>
+                <Link to="/query">QueryParams</Link>
+              </li>
             </ul>
           </div>
           <div className="nav-content">
@@ -256,6 +263,7 @@ class App extends React.Component {
             <Route path="/about" component={About} />
             <Route path="/inbox" component={Inbox} />
             <Route path="/topics" component={Topics} />
+            <Route path="/query" component={QueryParams} />
           </div>
         </Router>
       </div>
